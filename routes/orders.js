@@ -14,12 +14,12 @@ router.post('/acme/api/v45.1/orders', function(req, res, next) {
     var errors = req.validationErrors();
     if(errors) {
         res.code = 400;
-        res.json({"message":errors});
+        res.json({"message":errors}, 400);
         return;
     }
 
     res.code = 200;
-    res.json({'order':randomInt(0,32365)});
+    res.json({'order':randomInt(0,Number.MAX_SAFE_INTEGER)});
 });
 
 function randomInt (low, high) {
