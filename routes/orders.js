@@ -7,7 +7,7 @@ var MODELS = ['anvil','wile','roadrunner'];
 var PACKAGES = ['std', 'super', 'elite'];
 
 /* GET home page. */
-router.post('/acme/api/v45.1/orders', function(req, res, next) {
+router.post('/acme/api/v45.1/order', function(req, res, next) {
     req.checkBody('model', util.format('Model must be one of %s', MODELS)).isIn(MODELS);
     req.checkBody('package', util.format('package must be one of %s', PACKAGES)).isIn(PACKAGES);
 
