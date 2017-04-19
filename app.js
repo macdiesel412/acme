@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
+
 // Validate the API key
 app.use(function(req, res, next) {
     if(req.body.api_key != "cascade.53bce4f1dfa0fe8e7ca126f91b35d3a6") {
